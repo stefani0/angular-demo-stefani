@@ -1,0 +1,30 @@
+<div *ngFor="let field of field.fieldGroup; let i = index;">
+  <formly-group [model]="model[i]" [field]="field" [options]="options" [form]="formControl">
+
+    <!-- <button class="btn btn-danger" type="button" (click)="remove(i)">Remove</button> -->
+
+    <div class="card col-12">
+      <div class="card-header">
+        <div class="row">
+          <div class="col col-10">
+            <label class="col-">{{name}}</label>
+
+          </div>
+          <div class="col col-2">
+            <button class="btn btn-primary mx-1" tooltip="Ricerca" type="button" (click)="ricercaAangrafice()">
+              <i class="fa fa-arrow-right"></i>
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+
+  </formly-group>
+</div>
+<div style="margin:30px 0;">
+  <button class="btn btn-primary" type="button" (click)="add()">{{field.fieldArray.templateOptions.btnText}}</button>
+</div>

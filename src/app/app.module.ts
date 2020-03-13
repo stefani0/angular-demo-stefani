@@ -9,6 +9,7 @@ import {
   AppFooterModule,
 } from '@coreui/angular';
 import { DynamicModule } from './modules/dynamic-module/dynamic-module.module';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,9 @@ import { DynamicModule } from './modules/dynamic-module/dynamic-module.module';
     AppFooterModule,
     AppSidebarModule,
     PerfectScrollbarModule,
-    DynamicModule
+    DynamicModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

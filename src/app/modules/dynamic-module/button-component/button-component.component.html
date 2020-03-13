@@ -1,1 +1,14 @@
-<p>button-component works!</p>
+<form [formGroup]="genericForm" *ngIf="genericForm">
+
+  <div formArrayName="secondData">
+    <div *ngFor="let skill of secondData.controls; let i=index">
+      <div [formGroupName]="i">
+        {{name}}
+        {{i}}
+      </div>
+
+
+
+    </div>
+  </div>
+</form>

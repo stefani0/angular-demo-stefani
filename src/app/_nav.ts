@@ -19,7 +19,12 @@ export const navItems: INavData[] = [
             },
             {
                 name: 'ngx-datatable',
-                url: `/${environment.projectName}/dynamic/ngx-datatable`,
+                url: `/${environment.projectName}/dynamic/table`,
+                icon: 'fa fa-search'
+            },
+            {
+                name: 'template',
+                url: `/${environment.projectName}/dynamic/template`,
                 icon: 'fa fa-search'
             },
 
