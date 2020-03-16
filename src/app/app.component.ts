@@ -22,9 +22,9 @@ export class AppComponent {
    
 
     this.changes = new MutationObserver((mutations) => {
-      this.sidebarMinimized = _document.body.classList.contains('sidebar-minimized'),
-      console.log('change 1', this.changes),
-      console.log('this.sidebarMinimized 1',   this.sidebarMinimized)
+      this.sidebarMinimized = _document.body.classList.contains('sidebar-minimized')
+    //  console.log('change 1', this.changes),
+    //  console.log('this.sidebarMinimized 1',   this.sidebarMinimized)
     });
     this.element = _document.body;
     this.changes.observe( this.element as Element, {

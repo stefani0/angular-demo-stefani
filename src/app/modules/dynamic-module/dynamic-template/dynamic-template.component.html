@@ -6,20 +6,42 @@
     <div class="card col-12">
       <div class="card-header">
         <div class="row">
-          <div class="col col-10">
-            <label class="col-">{{name}}</label>
-
+          <div class="col "> 
+            <label> {{model[i].name}}</label>
+       
           </div>
-          <div class="col col-2">
-            <button class="btn btn-primary mx-1" tooltip="Ricerca" type="button" (click)="ricercaAangrafice()">
+          <div class="col col-1">
+            <button class="btn btn-primary " type="button" *ngIf="MyArrayType[i]" (click)="toggle(i)">
               <i class="fa fa-arrow-right"></i>
             </button>
-
+            <button class="btn btn-primary " type="button" *ngIf="!MyArrayType[i]" (click)="toggle(i)">
+              <i class="fa fa-arrow-down"></i>
+            </button>
           </div>
-
         </div>
-
       </div>
+
+     
+      <div class="card-body" *ngIf="VisualizaForm[0][i]">
+        <label>  {{model[i].description}}</label>
+      </div>
+      <div class="card-body" *ngIf="VisualizaForm[1][i]">
+        <label> {{model[i].description}}</label>
+      </div>
+
+
+      <!-- 
+
+
+      <ng-container *ngTemplateOutlet="loading" #container>
+        <div class="card-body">
+          <p>content one</p>
+        </div>
+        <div class="card-body">
+          <p>content two</p>
+        </div>
+      </ng-container> -->
+
     </div>
 
 

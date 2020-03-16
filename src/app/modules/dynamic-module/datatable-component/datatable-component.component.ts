@@ -8,20 +8,20 @@ import { FormGroup } from '@angular/forms';
   styleUrls: ['./datatable-component.component.css']
 })
 export class DatatableComponent implements OnInit {
+  active: boolean;
 
   constructor() {
 
     this.modelTable = {
       data: this.SondagiList
     };
-    console.log('data')
+    // console.log('data', this.modelTable);
+    // console.log('data', this.SondagiList);
+
 
   }
   modelTable: any = {};
   form = new FormGroup({});
-  model = {
-    data: [{}],
-  };
   options: FormlyFormOptions = {};
 
 
@@ -29,28 +29,31 @@ export class DatatableComponent implements OnInit {
     {
       key: 'data',
       type: 'action',
-      fieldArray: {
-        fieldGroupClassName: 'row',
+      fieldArray: {       
         templateOptions: {
           btnText: 'Add another investment',
-
-        },
-        fieldGroup: [
-          {
-            type: 'input',
-            key: 'name',
-            templateOptions: {
-              label: 'Stock Identifier:',
-              addonRight: {
-                class: 'fa fa-arrow-right',
-                onClick: (to, fieldType, $event) => console.log(to, fieldType, $event),
-              },
-            },
-          },
-        ],
+          nameService: 'vkvh',
+             },
+        // fieldGroup: [
+        //   {
+        //     type: 'input',
+        //     key: 'name',
+        //     templateOptions: {
+        //       label: 'Stock Identifier:',
+        //       addonRight: {
+        //         class: 'fa fa-arrow-right',
+        //         onClick: (to, fieldType, $event) => console.log(to, fieldType, $event),
+        //       },
+        //     },
+        //   },
+        // ],
       },
     },
   ];
+
+  onClick(){
+
+  }
 
   SondagiList: Array<Sondaggi> = [
     {
@@ -80,7 +83,8 @@ export class DatatableComponent implements OnInit {
   ];
 
   submit() {
-    alert(JSON.stringify(this.model));
+    // alert(JSON.stringify(this.model));
+    this.active = !this.active;
   }
 
   ngOnInit() {

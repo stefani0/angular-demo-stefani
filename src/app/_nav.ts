@@ -18,13 +18,13 @@ export const navItems: INavData[] = [
                 icon: 'fa fa-search'
             },
             {
-                name: 'ngx-datatable',
+                name: 'Dynamic List',
                 url: `/${environment.projectName}/dynamic/table`,
                 icon: 'fa fa-search'
             },
             {
-                name: 'template',
-                url: `/${environment.projectName}/dynamic/template`,
+                name: 'Dynamic Select',
+                url: `/${environment.projectName}/dynamic/select`,
                 icon: 'fa fa-search'
             },
 

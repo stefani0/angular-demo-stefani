@@ -4,6 +4,8 @@ import { ButtonComponent } from './button-component/button-component.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DatatableComponent } from './datatable-component/datatable-component.component';
 import { DynamicTemplateComponent } from './dynamic-template/dynamic-template.component';
+import { GenericSelectComponent } from './generic-select/generic-select.component';
+import { SelectComponentComponent } from './select-component/select-component.component';
 
 
 const routes: Routes = [
@@ -28,8 +30,8 @@ const routes: Routes = [
         },
       },
       {
-        path: 'dynamic/template',
-        component: DynamicTemplateComponent,
+        path: 'dynamic/select',
+        component: SelectComponentComponent,
         data: {
           title: 'button'
         },

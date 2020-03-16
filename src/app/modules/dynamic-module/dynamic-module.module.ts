@@ -9,18 +9,22 @@ import { DynamicTemplateComponent } from './dynamic-template/dynamic-template.co
 import { FormlyModule } from '@ngx-formly/core';
 
 import { FormlyBootstrapModule } from '@ngx-formly/bootstrap';
-
+import { GenericSelectComponent } from './generic-select/generic-select.component';
+import { SelectComponentComponent } from './select-component/select-component.component';
+import { NgSelectModule } from '@ng-select/ng-select';
 @NgModule({
-  declarations: [ButtonComponent, DatatableComponent, DynamicTemplateComponent],
+  declarations: [ButtonComponent, DatatableComponent, DynamicTemplateComponent, GenericSelectComponent, SelectComponentComponent],
   imports: [
     CommonModule,
     DynamicModuleRoutingModule,
     FormsModule,
     ReactiveFormsModule,
     FormlyBootstrapModule,
+    NgSelectModule,
     FormlyModule.forRoot({
       types: [
         { name: 'action', component: DynamicTemplateComponent },
+        { name: 'select', component: GenericSelectComponent },
       ],
     }),
   ],
